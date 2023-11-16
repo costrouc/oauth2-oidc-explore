@@ -1,11 +1,25 @@
 version: "3"
 services:
+  # supports all grant types
   keycloak:
     image: quay.io/keycloak/keycloak:latest
     environment:
       - KEYCLOAK_ADMIN=admin
-      - KEYCLOAK_ADMIN_PASSWORD=change_me
+      - KEYCLOAK_ADMIN_PASSWORD=password
     ports:
       - 8080:8080
     command:
       - start-dev
+  
+  # only supports authorization_code and refresh token grant  
+  dex:
+    image: dexidp/dex:v2.37.0
+    command: 
+     - dex
+     - serve
+     - /etc/dex/config.yaml
+    ports:
+     - 5556:5556
+    volumes:
+     - ./config/dex/:/etc/dex/:ro
+    

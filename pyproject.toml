@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oidc_test"
+authors = [{ name = "Chris Ostrouchov", email = "chris.ostrouchov@gmail.com" }]
+description = "OIDC Testing"
+readme = "README.rst"
+requires-python = ">=3.7"
+dependencies = ["requests", "pyjwt", "python-keycloak"]
+version = "0.0.1"
+
+[tool.setuptools]
+packages = ["oidc_test"]

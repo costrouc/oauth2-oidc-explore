@@ -1,0 +1,7 @@
+name: oidc-test
+channels:
+ - conda-forge
+dependencies:
+ - requests
+ - pyjwt
+ - python-keycloak

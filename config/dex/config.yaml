@@ -1,0 +1,32 @@
+issuer: http://127.0.0.1:5556/dex
+
+storage:
+  type: memory
+
+web:
+  http: 0.0.0.0:5556
+
+
+frontend:
+  logoURL: "https://raw.githubusercontent.com/nebari-dev/nebari-design/main/logo-mark/horizontal/Nebari-Logo-Horizontal-Lockup-White-text.svg"
+
+
+staticClients:
+  - id: testclient
+    redirectURIs:
+      - 'http://localhost:8000/callback'
+    name: 'A test client with a description'
+    secret: uFvSYbkVXvtBIoqX0OB4Ot8aU3OztiUE
+    public: false
+    logoURL: "https://raw.githubusercontent.com/nebari-dev/nebari-design/main/logo-mark/horizontal/Nebari-Logo-Horizontal-Lockup-White-text.svg"
+
+
+enablePasswordDB: true
+
+staticPasswords:
+  - email: "chris@example.com"
+    # echo password | htpasswd -BinC 10 admin | cut -d: -f2
+    # password
+    hash: "$2y$10$CQlLM6G5QO4yarbnypboUuXZyC.9Mk.dgh0W9ND4PyaA5YEAziB/m"
+    username: "chris"
+    userID: "08a8684b-db88-4b73-90a9-3cd1661f5466"
