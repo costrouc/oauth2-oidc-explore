@@ -5,3 +5,5 @@ dependencies:
  - requests
  - pyjwt
  - python-keycloak
+ - grpcio-tools
+ - bcrypt

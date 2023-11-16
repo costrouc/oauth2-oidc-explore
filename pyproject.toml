@@ -8,7 +8,7 @@ authors = [{ name = "Chris Ostrouchov", email = "chris.ostrouchov@gmail.com" }]
 description = "OIDC Testing"
 readme = "README.rst"
 requires-python = ">=3.7"
-dependencies = ["requests", "pyjwt", "python-keycloak"]
+dependencies = ["requests", "pyjwt", "python-keycloak", "grpcio-tools", "bcrypt"]
 version = "0.0.1"
 
 [tool.setuptools]

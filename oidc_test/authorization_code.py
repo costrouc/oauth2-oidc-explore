@@ -41,7 +41,7 @@ def flow(oidc_endpoint_configuration: str, client_id: str, client_secret: str, s
             )
             response.raise_for_status()
             data = response.json()
-            refresh_token = data["refresh_token"]
+            refresh_token = data.get("refresh_token")
             access_token = data["access_token"]
             id_token = data["id_token"]
 
